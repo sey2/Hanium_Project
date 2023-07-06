@@ -84,4 +84,4 @@
 
 ---
 ### FlowChart
-
+![기능 흐름도](https://github.com/sey2/Hanium_Project/assets/54762273/cc585a59-1ff6-4d7d-92b5-fe3409aa051a)
