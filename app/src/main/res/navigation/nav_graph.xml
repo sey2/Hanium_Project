@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/qutoeFragment">
+
+    <fragment
+        android:id="@+id/qutoeFragment"
+        android:name="com.example.hanium.QuoteFragment"
+        android:label="QuoteFragment"
+        tools:layout="@layout/fragment_quote"></fragment>
+
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.hanium.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat"></fragment>
+
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.hanium.MapFragment"
+        android:label="MapFragment"
+        tools:layout="@layout/fragment_map"></fragment>
+
+    <fragment
+        android:id="@+id/boardFragment"
+        android:name="com.example.hanium.BoardFragment"
+        android:label="BoardFragment"
+        tools:layout="@layout/fragment_board"></fragment>
+
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.hanium.UserFragment"
+        android:label="UserFragment"
+        tools:layout="@layout/fragment_user"></fragment>
+</navigation>
