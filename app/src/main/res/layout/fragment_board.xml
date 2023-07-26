@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,35 +7,46 @@
     android:orientation="vertical"
     >
 
-    <LinearLayout
+    <View
+        android:id="@+id/boardBar"
         android:layout_width="match_parent"
         android:layout_height="70sp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
         android:background="@color/light_blue"
-        >
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
-        <TextView
-            android:layout_width="340sp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="17sp"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:text="수산수산"
-            />
+    <TextView
+        android:id="@+id/boardTitle"
+        android:layout_width="340sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17sp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="수산수산"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/boardBar"
+        app:layout_constraintVertical_bias="0.5"
+        />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/write_24"
-            />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/write_24"
+        android:layout_marginEnd="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/boardBar"
+        app:layout_constraintVertical_bias="0.5"
+        />
 
-    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/boardBar"
+        >
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/postingList"
@@ -47,4 +58,4 @@
     </ScrollView>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
