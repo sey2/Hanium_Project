@@ -6,8 +6,6 @@ import com.example.hanium.databinding.FragmentUserModifyBinding
 import android.view.View
 import android.view.ViewGroup
 import android.os.Bundle
-
-
 class UserModifyFragment : Fragment() {
     private var _binding: FragmentUserModifyBinding? = null
     private val binding get() = _binding!!
