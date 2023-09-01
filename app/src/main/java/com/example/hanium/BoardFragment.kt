@@ -40,6 +40,7 @@ class BoardFragment : Fragment(), View.OnClickListener {
     ): View {
         binding = FragmentBoardBinding.inflate(inflater, container, false)
         return binding.root
+
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

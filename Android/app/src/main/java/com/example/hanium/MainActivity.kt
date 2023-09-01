@@ -1,8 +1,7 @@
 package com.example.hanium
 
-import android.content.pm.PackageManager
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.hanium.databinding.ActivityMainBinding

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/balloon_view"
+    android:layout_margin="5sp"
+    app:cardCornerRadius="8px"
+    >
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20sp"
+        android:paddingVertical="10sp"
+        >
+        
+        <TextView
+            android:id="@+id/market_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수산시장명"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/market_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:text="회"
+            android:textSize="12sp"
+            android:textColor="@color/light_grey"
+            app:layout_constraintStart_toEndOf="@id/market_name"
+            app:layout_constraintTop_toTopOf="@id/market_name"
+            app:layout_constraintBottom_toBottomOf="@id/market_name"
+            />
+
+        <TextView
+            android:id="@+id/market_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.0"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/market_name"/>
+
+        <RatingBar
+            android:id="@+id/market_ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:rating="4"
+            android:isIndicator="true"
+            app:layout_constraintTop_toBottomOf="@id/market_name"
+            app:layout_constraintStart_toEndOf="@id/market_rate"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

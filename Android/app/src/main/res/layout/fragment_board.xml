@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     >
 
     <View
-        android:id="@+id/mapBar"
+        android:id="@+id/boardBar"
         android:layout_width="match_parent"
         android:layout_height="70sp"
         android:background="@color/light_blue"
@@ -15,7 +16,7 @@
         />
 
     <TextView
-        android:id="@+id/mapTitle"
+        android:id="@+id/boardTitle"
         android:layout_width="340sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="17sp"
@@ -25,16 +26,36 @@
         android:text="수산수산"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/mapBar"
+        app:layout_constraintBottom_toBottomOf="@id/boardBar"
         app:layout_constraintVertical_bias="0.5"
         />
 
-    <FrameLayout
-        android:id="@+id/map_view"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/write_24"
+        android:layout_marginEnd="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/boardBar"
+        app:layout_constraintVertical_bias="0.5"
+        />
+
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mapBar"
-        />
+        app:layout_constraintTop_toBottomOf="@id/boardBar"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/postingList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/posting_list_view" />
+
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
