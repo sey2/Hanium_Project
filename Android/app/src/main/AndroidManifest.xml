@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -17,7 +19,8 @@
         android:theme="@style/Theme.Hanium"
         tools:targetApi="31"
         android:usesCleartextTraffic="true"
-        >
+        android:hardwareAccelerated="true">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -27,11 +30,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".BoardWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BoardDetailActivity"/>
+      
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="b9c79fcd259b8a39688cac7d8696075f"/>
-
     </application>
 
 </manifest>
