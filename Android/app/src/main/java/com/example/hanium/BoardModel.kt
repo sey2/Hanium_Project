@@ -1,5 +1,6 @@
 package com.example.hanium
 
+import android.net.Uri
 import android.os.Parcel
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
@@ -22,6 +23,8 @@ data class BoardItem(
     }
 }
 
-data class PostResult(
-    val result: String? = null
+data class PostingData(
+    val title: String,
+    val content: String,
+    val MainImageUrl: Uri
 )

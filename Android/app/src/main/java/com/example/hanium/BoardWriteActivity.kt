@@ -45,4 +45,17 @@ class BoardWriteActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
+    private fun hasCamPermission() =
+        ActivityCompat.checkSelfPermission(
+            this,
+            Manifest.permission.CAMERA
+        ) == PackageManager.PERMISSION_GRANTED
+    private fun requestCamPermission(){
+        ActivityCompat.requestPermissions(
+            this,
+            arrayOf(Manifest.permission.CAMERA),
+
+        )
+    }
 }
