@@ -24,7 +24,6 @@ class BoardAdapter(
         val boardContent: TextView = itemView.findViewById(R.id.postListPV)
         val boardUserName: TextView = itemView.findViewById(R.id.postListUsername)
         val boardDate: TextView = itemView.findViewById(R.id.postListDate)
-        val boardHits: TextView = itemView.findViewById(R.id.postListHits)
 
         fun bind(item: BoardItem) {
             itemView.setOnClickListener {
@@ -48,7 +47,6 @@ class BoardAdapter(
         holder.boardContent.text = itemList[position].content
         holder.boardUserName.text = itemList[position].userName
         holder.boardDate.text = itemList[position].date.toString()
-        holder.boardHits.text = "조회 " + itemList[position].hits.toString()
         holder.bind(boardItem)
     }
 

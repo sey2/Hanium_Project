@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hanium.databinding.FragmentBoardBinding
 import com.example.hanium.databinding.PostingListViewBinding
-import kotlinx.android.synthetic.clearFindViewByIdCache
 import org.w3c.dom.Text
 import retrofit2.Call
 import retrofit2.Callback
@@ -42,9 +41,6 @@ class BoardFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         binding.btnWrite.setOnClickListener(this)
 
-        /**
-         * 서버 URL 추가*/
-//        boardListRequest()
         addPosting()
         binding.postingList.adapter = BoardAdapter(itemList)
         binding.postingList.layoutManager = LinearLayoutManager(
@@ -86,15 +82,15 @@ class BoardFragment : Fragment(), View.OnClickListener {
     }
 
     private fun addPosting(){ //임시 테스트 데이터
-        itemList.add(BoardItem("질문","수산시장 질문","궁금한 게 있습니다", "익명1", 20230828163000, 13))
-        itemList.add(BoardItem("수다","싸네요","우와 진짜 싸요", "익명2", 20230828152412, 17))
-        itemList.add(BoardItem("수다","놀러왔습니다","넓고 좋네요", "익명3", 20230828101112, 24))
-        itemList.add(BoardItem("질문","수산시장 질문","궁금한 게 있습니다", "익명1", 20230827162542, 13))
-        itemList.add(BoardItem("수다","싸네요","우와 진짜 싸요", "익명2", 20230827121624, 17))
-        itemList.add(BoardItem("수다","놀러왔습니다","넓고 좋네요", "익명3", 20230826192412, 24))
-        itemList.add(BoardItem("질문","수산시장 질문","궁금한 게 있습니다", "익명1", 20230825202451, 13))
-        itemList.add(BoardItem("수다","싸네요","우와 진짜 싸요", "익명2", 20230825192315, 17))
-        itemList.add(BoardItem("수다","놀러왔습니다","넓고 좋네요", "익명3", 20230825071513, 24))
+        itemList.add(BoardItem("질문","수산시장 질문","궁금한 게 있습니다", "익명1", 20230828163000))
+        itemList.add(BoardItem("수다","싸네요","우와 진짜 싸요", "익명2", 20230828152412))
+        itemList.add(BoardItem("수다","놀러왔습니다","넓고 좋네요", "익명3", 20230828101112))
+        itemList.add(BoardItem("질문","수산시장 질문","궁금한 게 있습니다", "익명1", 20230827162542))
+        itemList.add(BoardItem("수다","싸네요","우와 진짜 싸요", "익명2", 20230827121624))
+        itemList.add(BoardItem("수다","놀러왔습니다","넓고 좋네요", "익명3", 20230826192412))
+        itemList.add(BoardItem("질문","수산시장 질문","궁금한 게 있습니다", "익명1", 20230825202451))
+        itemList.add(BoardItem("수다","싸네요","우와 진짜 싸요", "익명2", 20230825192315))
+        itemList.add(BoardItem("수다","놀러왔습니다","넓고 좋네요", "익명3", 20230825071513))
         Log.d(tag, "$itemList")
     }
 
