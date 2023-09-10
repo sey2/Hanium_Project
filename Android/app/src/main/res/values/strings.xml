@@ -9,4 +9,16 @@
     <string name="user_fragment">User Fragment</string>
     <string name="user_name">수산 병아리님</string>
     <string name="name">이름</string>
+    <string name="percentage_30">30%</string>
+    <string name="current_money">현재 보유 중인 재화</string>
+    <string name="_4_500">4,500원</string>
+    <string name="_2">2개</string>
+    <string name="money_description">보유 중인 돈</string>
+    <string name="coupon_description">보유 중인 쿠폰</string>
+    <string name="susan_susan">수산수산</string>
+    <string name="contact">연락처</string>
+    <string name="email">이메일</string>
+    <string name="birth">생년월일</string>
+    <string name="save">저장하기</string>
+    <string name="logout">로그아웃</string>
 </resources>

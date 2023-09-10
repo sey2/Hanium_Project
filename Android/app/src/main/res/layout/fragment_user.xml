@@ -3,18 +3,233 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <View
+        android:id="@+id/profileBar"
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:background="@color/light_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/profile_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/susan_susan"
+        android:layout_marginStart="17dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/profileBar"
+        app:layout_constraintStart_toStartOf="@id/profileBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/iv_setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/user_fragment"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="11dp"
+        android:src="@drawable/ic_setting_24"
+        app:layout_constraintBottom_toBottomOf="@id/profileBar"
+        app:layout_constraintEnd_toEndOf="@id/profileBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_user_profile"
+        android:layout_width="123dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="44dp"
+        app:cardCornerRadius="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="유저 정보 화면"
-        tools:textSize="24sp"
-        tools:textColor="@color/black"/>
+        app:layout_constraintTop_toBottomOf="@id/profileBar" />
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        android:src="@drawable/img_profile"
+        app:layout_constraintBottom_toBottomOf="@id/cv_user_profile"
+        app:layout_constraintEnd_toEndOf="@id/cv_user_profile"
+        app:layout_constraintStart_toStartOf="@id/cv_user_profile"
+        app:layout_constraintTop_toTopOf="@id/cv_user_profile" />
+
+    <ImageView
+        android:id="@+id/iv_modify_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_imge_modify"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/cv_user_profile"
+        app:layout_constraintEnd_toEndOf="@id/cv_user_profile" />
+
+    <TextView
+        android:id="@+id/tv_nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/cv_user_profile"
+        app:layout_constraintStart_toStartOf="@id/cv_user_profile"
+        app:layout_constraintTop_toBottomOf="@id/cv_user_profile"
+        tools:text="@string/user_name" />
+
+    <ImageView
+        android:id="@+id/iv_user_info_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/profile_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nick_name" />
+
+    <TextView
+        android:id="@+id/tv_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:text="Lv1"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/iv_user_info_container"
+        app:layout_constraintTop_toTopOf="@id/iv_user_info_container" />
+
+    <ImageView
+        android:id="@+id/iv_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/group_16"
+        app:layout_constraintBottom_toBottomOf="@id/iv_user_info_container"
+        app:layout_constraintStart_toStartOf="@id/iv_user_info_container"
+        app:layout_constraintTop_toBottomOf="@+id/tv_level" />
+
+    <TextView
+        android:id="@+id/tv_level_modify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="수산 초보"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_user_info_container"
+        app:layout_constraintStart_toEndOf="@+id/iv_heart"
+        app:layout_constraintTop_toTopOf="@+id/iv_user_info_container"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <TextView
+        android:id="@+id/tv_level_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/percentage_30"
+        android:textColor="#FFC700"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_user_info_container"
+        app:layout_constraintStart_toEndOf="@+id/iv_heart"
+        app:layout_constraintTop_toBottomOf="@+id/tv_level_modify"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_user_goods"
+        android:layout_width="330dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_user_info_container" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_current_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/current_money"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_money"
+                app:layout_constraintStart_toStartOf="@+id/tv_current_money"
+                app:layout_constraintTop_toBottomOf="@+id/tv_current_money" />
+
+            <TextView
+                android:id="@+id/tv_current_money_won"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="14dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="@string/_4_500"
+                app:layout_constraintStart_toEndOf="@+id/iv_money"
+                app:layout_constraintTop_toBottomOf="@+id/tv_current_money" />
+
+            <ImageView
+                android:id="@+id/iv_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_coupon"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/iv_money"
+                app:layout_constraintTop_toBottomOf="@+id/iv_money" />
+
+            <TextView
+                android:id="@+id/tv_current_coupon_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:text="@string/_2"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_current_money_won"
+                app:layout_constraintTop_toBottomOf="@+id/tv_current_money_won" />
+
+            <TextView
+                android:id="@+id/tv_money_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="34dp"
+                android:textSize="13sp"
+                android:text="@string/money_description"
+                android:textColor="#BCC7D0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_current_money_won" />
+
+            <TextView
+                android:id="@+id/tv_coupon_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="34dp"
+                android:text="@string/coupon_description"
+                android:textColor="#BCC7D0"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_current_coupon_num" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
