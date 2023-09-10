@@ -28,7 +28,12 @@ class BoardAdapter(
         fun bind(item: BoardItem) {
             itemView.setOnClickListener {
                 val intent = Intent(context, BoardDetailActivity::class.java)
-                intent.putExtra("data", item)
+//                intent.putExtra("data", item)
+                intent.putExtra("badge", item.badge)
+                intent.putExtra("title", item.title)
+                intent.putExtra("content", item.content)
+                intent.putExtra("userNm", item.userName)
+                intent.putExtra("date", item.date)
                 intent.run { context.startActivity(this) }
             }
         }
