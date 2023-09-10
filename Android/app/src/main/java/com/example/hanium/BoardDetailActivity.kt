@@ -26,14 +26,19 @@ class BoardDetailActivity: AppCompatActivity() {
         setContentView(binding.root)
 
         val data = if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            intent.getParcelableExtra("data", BoardItem::class.java)
+//            intent.getParcelableExtra("data", BoardItem::class.java)
+            binding.postingBadge.text = intent.getStringExtra("badge")
+            binding.postingTitle.text = intent.getStringExtra("title")
+            binding.postingContent.text = intent.getStringExtra("content")
+            binding.postingUserName.text = intent.getStringExtra("userNm")
+            binding.postingDate.text = intent.getStringExtra("date")
         } else {
-            intent.getParcelableExtra("data") as? BoardItem
+//            intent.getParcelableExtra("data") as? BoardItem
         }
 
         // 데이터 입력
-        binding.postingBadge.text = data?.badge
-        binding.postingTitle.text = data?.title
-        binding.postingContent.text = data?.content
+//        binding.postingBadge.text = data?.badge
+//        binding.postingTitle.text = data?.title
+//        binding.postingContent.text = data?.content
     }
 }
