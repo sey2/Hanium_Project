@@ -21,4 +21,10 @@
     <string name="birth">생년월일</string>
     <string name="save">저장하기</string>
     <string name="logout">로그아웃</string>
+    <string name="susan_nl_susan">수산\n수산</string>
+    <string name="easier_susan_info">더욱 쉬운 수산 시장 정보</string>
+    <string name="id">아이디</string>
+    <string name="password">비밀번호</string>
+    <string name="login">로그인</string>
+    <string name="register">회원가입</string>
 </resources>

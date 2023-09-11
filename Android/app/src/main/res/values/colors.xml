@@ -10,4 +10,6 @@
     <color name="light_grey">#E0E0E0</color>
     <color name="category_background">#5cceff</color>
     <color name="light_blue">#3dbff6</color>
+    <color name="primary_color">#69B7FF</color>
+    <color name="light_sky">#A3E3FF</color>
 </resources>
