@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hanium.databinding.ItemChatMessageBinding
 
-class ChatAdapter(private val messages: MutableList<ChatMessage>) :
+class ChatAdapter() :
     RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
 
+    private val messages = mutableListOf<ChatMessage>()
     override fun getItemViewType(position: Int): Int {
         return messages[position].type.ordinal
     }
@@ -24,6 +25,13 @@ class ChatAdapter(private val messages: MutableList<ChatMessage>) :
     }
 
     override fun getItemCount() = messages.size
+
+
+    fun addMessage(message: String, type: MessageType) {
+        val chatMessage = ChatMessage(message, type)
+        messages.add(chatMessage)
+        notifyItemInserted(messages.size - 1)
+    }
 
     inner class ChatViewHolder(val binding: ItemChatMessageBinding) :
         RecyclerView.ViewHolder(binding.root) {
