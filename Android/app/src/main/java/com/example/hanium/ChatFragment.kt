@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.BuildCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hanium.databinding.FragmentChatBinding
 import okhttp3.Call
@@ -26,7 +27,7 @@ class ChatFragment : Fragment() {
     private val messages = mutableListOf<ChatMessage>()
     private val adapter = ChatAdapter(messages)
     private var json: MediaType = MediaType.get("application/json; charset=utf-8")
-    private val apiKey: String = "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"
+    private val apiKey: String = BuildConfig.GPT_API_KEY
     private var client = OkHttpClient()
 
     override fun onCreateView(
