@@ -27,4 +27,6 @@
     <string name="password">비밀번호</string>
     <string name="login">로그인</string>
     <string name="register">회원가입</string>
+    <string name="enter_to_message">메세지를 입력해 주세요</string>
+    <string name="chat_to_chatbot">챗 봇과 대화</string>
 </resources>
