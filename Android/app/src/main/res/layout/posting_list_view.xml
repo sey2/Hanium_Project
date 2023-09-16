@@ -85,32 +85,6 @@
         app:layout_constraintStart_toEndOf="@id/postListDot1"
         />
 
-    <TextView
-        android:id="@+id/postListDot2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="5sp"
-        android:paddingEnd="5sp"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        android:textColor="@color/light_grey"
-        android:text="•"
-        app:layout_constraintTop_toBottomOf="@id/postListPV"
-        app:layout_constraintStart_toEndOf="@id/postListDate"
-        />
-
-    <TextView
-        android:id="@+id/postListHits"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        android:textColor="@color/light_grey"
-        android:text="조회수"
-        app:layout_constraintTop_toBottomOf="@id/postListPV"
-        app:layout_constraintStart_toEndOf="@id/postListDot2"
-        />
-
     <ImageView
         android:id="@+id/postListImage"
         android:layout_width="70sp"

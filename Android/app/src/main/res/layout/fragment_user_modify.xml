@@ -6,6 +6,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <View
+            android:id="@+id/profileBar"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:background="@color/light_blue"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/profileTitle"
+            android:layout_width="340sp"
+            android:layout_height="wrap_content"
+            android:text="@string/susan_susan"
+            android:layout_marginStart="17dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/profileBar"
+            app:layout_constraintStart_toStartOf="@id/profileBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_profile"
             android:layout_width="123dp"
@@ -14,7 +36,7 @@
             app:cardCornerRadius="250dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/profileBar">
 
             <ImageView
                 android:id="@+id/iv_profile"
@@ -22,10 +44,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/img_profile"
-                app:layout_constraintBottom_toBottomOf="@+id/cv_profile"
-                app:layout_constraintEnd_toEndOf="@+id/cv_profile"
-                app:layout_constraintStart_toStartOf="@+id/cv_profile"
-                app:layout_constraintTop_toTopOf="@+id/cv_profile" />
+                app:layout_constraintBottom_toBottomOf="@id/cv_profile"
+                app:layout_constraintEnd_toEndOf="@id/cv_profile"
+                app:layout_constraintStart_toStartOf="@id/cv_profile"
+                app:layout_constraintTop_toTopOf="@id/cv_profile" />
         </androidx.cardview.widget.CardView>
 
         <TextView
@@ -39,7 +61,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cv_profile" />
+            app:layout_constraintTop_toBottomOf="@id/cv_profile" />
 
         <TextView
             android:id="@+id/tv_name_title"
@@ -50,7 +72,7 @@
             android:text="@string/name"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+            app:layout_constraintTop_toBottomOf="@id/tv_user_name" />
 
         <EditText
             android:id="@+id/et_name"
@@ -60,8 +82,8 @@
             android:background="@drawable/round_background_et"
             android:ems="10"
             android:inputType="text"
-            app:layout_constraintStart_toStartOf="@+id/tv_name_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name_title" />
+            app:layout_constraintStart_toStartOf="@id/tv_name_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_title" />
 
 
         <TextView
@@ -69,10 +91,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="연락처"
+            android:text="@string/contact"
             android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@+id/et_name"
-            app:layout_constraintTop_toBottomOf="@+id/et_name" />
+            app:layout_constraintStart_toStartOf="@id/et_name"
+            app:layout_constraintTop_toBottomOf="@id/et_name" />
 
         <EditText
             android:id="@+id/et_number"
@@ -82,8 +104,8 @@
             android:background="@drawable/round_background_et"
             android:ems="10"
             android:inputType="text"
-            app:layout_constraintStart_toStartOf="@+id/tv_number_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_number_title" />
+            app:layout_constraintStart_toStartOf="@id/tv_number_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_number_title" />
 
 
         <TextView
@@ -91,10 +113,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="연락처"
+            android:text="@string/email"
             android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@+id/et_number"
-            app:layout_constraintTop_toBottomOf="@+id/et_number" />
+            app:layout_constraintStart_toStartOf="@id/et_number"
+            app:layout_constraintTop_toBottomOf="@id/et_number" />
 
         <EditText
             android:id="@+id/et_email"
@@ -104,18 +126,18 @@
             android:background="@drawable/round_background_et"
             android:ems="10"
             android:inputType="text"
-            app:layout_constraintStart_toStartOf="@+id/tv_email_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_email_title" />
+            app:layout_constraintStart_toStartOf="@id/tv_email_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_email_title" />
 
         <TextView
             android:id="@+id/tv_birth_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="연락처"
+            android:text="@string/birth"
             android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@+id/et_email"
-            app:layout_constraintTop_toBottomOf="@+id/et_email" />
+            app:layout_constraintStart_toStartOf="@id/et_email"
+            app:layout_constraintTop_toBottomOf="@id/et_email" />
 
         <EditText
             android:id="@+id/et_birth"
@@ -125,8 +147,8 @@
             android:background="@drawable/round_background_et"
             android:ems="10"
             android:inputType="text"
-            app:layout_constraintStart_toStartOf="@+id/tv_birth_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_birth_title" />
+            app:layout_constraintStart_toStartOf="@id/tv_birth_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_birth_title" />
 
         <Button
             android:id="@+id/btn_save"
@@ -134,7 +156,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="#3DBFF6"
-            android:text="저장하기"
+            android:text="@string/save"
             app:layout_constraintEnd_toStartOf="@id/btn_logout"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_birth" />
@@ -144,11 +166,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="로그아웃"
+            android:text="@string/logout"
             android:backgroundTint="#3DBFF6"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btn_save"
-            app:layout_constraintTop_toBottomOf="@+id/et_birth" />
+            app:layout_constraintStart_toEndOf="@id/btn_save"
+            app:layout_constraintTop_toBottomOf="@id/et_birth" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
