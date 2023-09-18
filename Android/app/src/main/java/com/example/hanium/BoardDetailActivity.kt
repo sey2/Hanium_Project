@@ -8,15 +8,18 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.os.PersistableBundle
 import android.util.Log
+import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hanium.databinding.ActivityBoardWriteBinding
 import com.example.hanium.databinding.BoardDetailActivityBinding
+import com.example.hanium.databinding.CommentsViewBinding
 import java.io.Serializable
 
 class BoardDetailActivity: AppCompatActivity() {
 
     private lateinit var binding: BoardDetailActivityBinding
+    private lateinit var cmtBinding: CommentsViewBinding
     private lateinit var data: BoardItem
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,8 +28,7 @@ class BoardDetailActivity: AppCompatActivity() {
         binding = BoardDetailActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val data = if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-//            intent.getParcelableExtra("data", BoardItem::class.java)
+        val data = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             binding.postingBadge.text = intent.getStringExtra("badge")
             binding.postingTitle.text = intent.getStringExtra("title")
             binding.postingContent.text = intent.getStringExtra("content")
@@ -35,10 +37,9 @@ class BoardDetailActivity: AppCompatActivity() {
         } else {
 //            intent.getParcelableExtra("data") as? BoardItem
         }
+    }
 
-        // 데이터 입력
-//        binding.postingBadge.text = data?.badge
-//        binding.postingTitle.text = data?.title
-//        binding.postingContent.text = data?.content
+    fun postCmt(view: View){
+        val comment = binding.boardCmtWrite.text.toString()
     }
 }

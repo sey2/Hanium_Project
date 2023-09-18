@@ -13,7 +13,7 @@ import com.example.hanium.databinding.BoardDetailActivityBinding
 import com.example.hanium.databinding.FragmentBoardBinding
 
 class BoardAdapter(
-    private val itemList: ArrayList<BoardItem>) :
+    private val itemList: MutableList<BoardItem>) :
     RecyclerView.Adapter<BoardAdapter.BoardViewHolder>(){
 
     inner class BoardViewHolder(itemView: View) :
@@ -28,7 +28,6 @@ class BoardAdapter(
         fun bind(item: BoardItem) {
             itemView.setOnClickListener {
                 val intent = Intent(context, BoardDetailActivity::class.java)
-//                intent.putExtra("data", item)
                 intent.putExtra("badge", item.badge)
                 intent.putExtra("title", item.title)
                 intent.putExtra("content", item.content)
@@ -49,9 +48,9 @@ class BoardAdapter(
         val boardItem = itemList[position]
         holder.boardBadge.text = itemList[position].badge
         holder.boardTitle.text = itemList[position].title
-        holder.boardContent.text = itemList[position].content
+        holder.boardContent.text = itemList[position].content.substring(0 until 25) +"..."
         holder.boardUserName.text = itemList[position].userName
-        holder.boardDate.text = itemList[position].date.toString()
+        holder.boardDate.text = itemList[position].date
         holder.bind(boardItem)
     }
 
