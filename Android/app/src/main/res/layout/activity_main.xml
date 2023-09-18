@@ -24,6 +24,7 @@
         android:layout_height="60dp"
         android:layout_gravity="bottom"
         android:background="@drawable/bottom_nav_round"
+        android:visibility="gone"
         app:itemIconTint="@drawable/item_color"
         app:itemTextColor="@drawable/menu_selector"
         app:labelVisibilityMode="labeled"
