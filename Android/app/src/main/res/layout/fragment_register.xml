@@ -99,7 +99,7 @@
         style="?android:attr/borderlessButtonStyle"/>
 
     <TextView
-        android:id="@+id/validateButton"
+        android:id="@+id/btnValidate"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
