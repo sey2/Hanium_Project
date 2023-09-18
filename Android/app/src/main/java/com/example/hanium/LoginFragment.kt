@@ -1,5 +1,4 @@
 package com.example.hanium
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,18 +6,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.hanium.databinding.FragmentLoginBinding
-import com.example.hanium.databinding.FragmentUserBinding
 
-class UserFragment : Fragment() {
-
-    private var _binding : FragmentUserBinding? = null
+class LoginFragment : Fragment() {
+    private var _binding : FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentUserBinding.inflate(inflater, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
         return binding.root
     }
@@ -27,8 +24,12 @@ class UserFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            ivSetting.setOnClickListener {
-                findNavController().navigate(R.id.action_userFragment_to_userModifyFragment)
+            btnLogin.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_qutoeFragment)
+            }
+
+            btnRegister.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
             }
         }
     }

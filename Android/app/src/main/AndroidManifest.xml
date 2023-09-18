@@ -26,16 +26,15 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".BoardWriteActivity"
             android:exported="false" />
         <activity
             android:name=".BoardDetailActivity"/>
-      
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="b9c79fcd259b8a39688cac7d8696075f"/>

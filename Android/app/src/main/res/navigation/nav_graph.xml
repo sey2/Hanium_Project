@@ -3,7 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/qutoeFragment">
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.hanium.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_qutoeFragment"
+            app:destination="@id/qutoeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/qutoeFragment"
@@ -33,11 +45,21 @@
         android:id="@+id/userFragment"
         android:name="com.example.hanium.UserFragment"
         android:label="UserFragment"
-        tools:layout="@layout/fragment_user" />
+        tools:layout="@layout/fragment_user">
+        <action
+            android:id="@+id/action_userFragment_to_userModifyFragment"
+            app:destination="@id/userModifyFragment" />
+    </fragment>
 
     <fragment
-        android:id="@+id/fragment_user_modify"
+        android:id="@+id/userModifyFragment"
         android:name="com.example.hanium.UserModifyFragment"
-        android:label="UserFragment"
+        android:label="UserModifyFragment"
         tools:layout="@layout/fragment_user_modify" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.hanium.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register" />
 </navigation>
