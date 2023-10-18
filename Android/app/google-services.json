@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "887849616607",
+    "project_id": "fishingfishing-f3a33",
+    "storage_bucket": "fishingfishing-f3a33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887849616607:android:80561b2b4380c44f67556a",
+        "android_client_info": {
+          "package_name": "com.example.hanium"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaqcwzskfvWCDbEKtQKJDLR4Ciph_zjp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887849616607:android:922129a64398063c67556a",
+        "android_client_info": {
+          "package_name": "com.fishingfishing.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaqcwzskfvWCDbEKtQKJDLR4Ciph_zjp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
